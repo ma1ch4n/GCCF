@@ -1,0 +1,27 @@
+/******* Customized Bootstrap ********/
+
+$primary: #6237fe;
+$light: #24e8ca;
+$dark: #0b0329;
+
+
+
+$font-family-base: 'Pacifico', sans-serif;
+
+$headings-font-family: 'Vampiro one', sans-serif;
+
+$body-bg: $light;
+
+$body-color: #938593;
+
+$headings-color: $dark;
+
+$enable-responsive-font-sizes: true;
+
+$border-radius: 10px;
+
+$link-decoration: none;
+
+$enable-negative-margins: true;
+
+@import "bootstrap/scss/bootstrap";

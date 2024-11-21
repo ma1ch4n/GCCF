@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Fun for Kids!</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #ff9999, #ffcc99, #ffff99, #ccff99, #99ffcc, #99ccff, #9999ff, #cc99ff);
+            text-align: center;
+            padding: 20px;
+            overflow: hidden;
+        }
+        h1 {
+            color: #ff6f61;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+        }
+        .color {
+            display: inline-block;
+            margin: 15px;
+            width: 100px;
+            height: 100px;
+            border-radius: 15px;
+            transition: transform 0.2s;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .color:hover {
+            transform: scale(1.1);
+        }
+        .red { background-color: #FF0000; }
+        .orange { background-color: #FFA500; }
+        .yellow { background-color: #FFFF00; }
+        .green { background-color: #008000; }
+        .blue { background-color: #0000FF; }
+        .indigo { background-color: #4B0082; }
+        .violet { background-color: #EE82EE; }
+        .cyan { background-color: #00FFFF; }
+        .magenta { background-color: #FF00FF; }
+        .lime { background-color: #00FF00; }
+        .purple { background-color: #800080; }
+        .pink { background-color: #FFC0CB; }
+        .brown { background-color: #A52A2A; }
+        .gray { background-color: #808080; }
+        .black { background-color: #000000; }
+        .white { background-color: #FFFFFF; border: 2px solid #ccc; }
+
+        .color-info {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #333;
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 10px;
+            display: none; /* Initially hidden */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Color Fun for Kids!</h1>
+    <button class="nav-btn" onclick="location.href='index.html'">Home</button>
+
+    <div class="color red" onclick="showColorInfo('Red')"></div>
+    <div class="color orange" onclick="showColorInfo('Orange')"></div>
+    <div class="color yellow" onclick="showColorInfo('Yellow')"></div>
+    <div class="color green" onclick="showColorInfo('Green')"></div>
+    <div class="color blue" onclick="showColorInfo('Blue')"></div>
+    <div class="color indigo" onclick="showColorInfo('Indigo')"></div>
+    <div class="color violet" onclick="showColorInfo('Violet')"></div>
+    <div class="color cyan" onclick="showColorInfo('Cyan')"></div>
+    <div class="color magenta" onclick="showColorInfo('Magenta')"></div>
+    <div class="color lime" onclick="showColorInfo('Lime')"></div>
+    <div class="color purple" onclick="showColorInfo('Purple')"></div>
+    <div class="color pink" onclick="showColorInfo('Pink')"></div>
+    <div class="color brown" onclick="showColorInfo('Brown')"></div>
+    <div class="color gray" onclick="showColorInfo('Gray')"></div>
+    <div class="color black" onclick="showColorInfo('Black')"></div>
+    <div class="color white" onclick="showColorInfo('White')"></div>
+
+    <div id="color-info" class="color-info"></div>
+
+    <script>
+        function showColorInfo(color) {
+            const infoDiv = document.getElementById('color-info');
+            infoDiv.innerHTML = `This color is <strong>${color}</strong>! Isn't it beautiful?`;
+            infoDiv.style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Sprint Game</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Times+New+Roman&display=swap');
+    
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(to bottom, #d4af37, #c19a6b, #e6c75e);
+            color: #333;
+        }
+    
+        .container {
+            text-align: center;
+            background-color: rgb(247, 241, 241);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    
+        h1 {
+            font-size: 36px;
+            color: rgb(95, 90, 90);
+            font-family: 'Times New Roman', Times, serif;
+        }
+    
+        p {
+            font-size: 30px;
+            margin: 10px 0;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+        }
+    
+        .options {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+    
+        .option {
+            margin: 0 10px;
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: rgb(241, 241, 18);
+            color: black;
+            border: 1px solid gray;
+            border-radius: 5px;
+            font-size: 20px;
+            transition: background-color 0.3s ease;
+        }
+    
+        .option:hover {
+            background-color: rgb(248, 248, 42);
+        }
+    
+        button {
+            margin-top: 20px;
+            padding: 10px 25px;
+            cursor: pointer;
+            background-color: #f39c12;
+            color: #fff;
+            border: 1px solid gray;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 20px;
+            transition: background-color 0.3s ease;
+        }
+    
+        button:hover {
+            background-color: #d35400;
+        }
+    
+        .score {
+            margin-top: 20px;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 24px;
+            color: #27ae60;
+        }
+    
+        #timer {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #333;
+            background-color: #bdc3c7;
+            padding: 10px 5px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+        }
+    
+        #highScore {
+            margin-top: 20px;
+            font-size: 25px;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+            color: green;
+        }
+    
+        #result {
+            margin-top: 20px;
+            font-size: 24px;
+            font-family: 'Times New Roman', Times, serif;
+            color: red;
+        }
+    
+        .incorrect {
+            color: red;
+        }
+    
+        .correct {
+            color: green;
+        }
+    
+        /* Responsive Styles */
+        @media only screen and (max-width: 600px) {
+            .container {
+                width: 90%;
+            }
+    
+            h1 {
+                font-size: 28px;
+            }
+    
+            p {
+                font-size: 24px;
+            }
+    
+            .option {
+                font-size: 18px;
+                padding: 5px 12px;
+            }
+    
+            button {
+                font-size: 18px;
+                padding: 8px 20px;
+            }
+    
+            .score {
+                font-size: 20px;
+            }
+    
+            #timer {
+                font-size: 18px;
+            }
+    
+            #highScore {
+                font-size: 20px;
+            }
+    
+            #result {
+                font-size: 20px;
+            }
+        }
+    </style>
+    
+
+<body>
+    <div class="container">
+        <h1>Math Mania Easy</h1>
+        <p id="problem"></p>
+        <div class="options" id="options"></div>
+        <p id="result"></p>
+        <p class="score">Score: <span id="currentScore">0</span></p>
+        <p id="timer">Time: <span id="time">20</span> seconds</p>
+        <button onclick="startGame()">Start Game</button>
+        <button onclick="resetGame()">Reset Game</button>
+        <button class="nav-btn" onclick="location.href='index.html'">Home</button>
+        <button class="nav-btn" onclick="location.href='mathmed.html'">Medium</button>
+        <button class="nav-btn" onclick="location.href='mathhard.html'">Hard</button>
+        <p id="highScore">High Score: <span id="highScoreValue">0</span></p>
+    </div>
+
+    <script src="js/math.js"></script>
+</body>
+
+</html>

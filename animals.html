@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn About Animals</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #e6f7ff;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #ff6f61;
+            font-size: 2.5em;
+        }
+        .animal {
+            border: 2px solid #ffb3b3;
+            border-radius: 15px;
+            background-color: #fff;
+            padding: 20px;
+            margin: 15px;
+            display: inline-block;
+            width: 200px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .animal:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+        .emoji {
+            font-size: 70px; /* Bigger emoji size */
+        }
+        #info {
+            margin-top: 20px;
+            font-size: 1.3em;
+            color: #34495e;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            padding: 15px;
+            border-radius: 10px;
+            display: inline-block;
+            width: 80%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Learn About Animals!</h1>
+    <button class="nav-btn" onclick="location.href='index.html'">Home</button>
+
+    <div class="animal" onclick="showInfo('dog')">
+        <h2 class="emoji">🐶</h2>
+        <h2>Dog</h2>
+    </div>
+    <div class="animal" onclick="showInfo('cat')">
+        <h2 class="emoji">🐱</h2>
+        <h2>Cat</h2>
+    </div>
+    <div class="animal" onclick="showInfo('rabbit')">
+        <h2 class="emoji">🐰</h2>
+        <h2>Rabbit</h2>
+    </div>
+    <div class="animal" onclick="showInfo('hamster')">
+        <h2 class="emoji">🐹</h2>
+        <h2>Hamster</h2>
+    </div>
+    <div class="animal" onclick="showInfo('turtle')">
+        <h2 class="emoji">🐢</h2>
+        <h2>Turtle</h2>
+    </div>
+    <div class="animal" onclick="showInfo('bird')">
+        <h2 class="emoji">🐦</h2>
+        <h2>Bird</h2>
+    </div>
+    <div class="animal" onclick="showInfo('fish')">
+        <h2 class="emoji">🐟</h2>
+        <h2>Fish</h2>
+    </div>
+    <div class="animal" onclick="showInfo('lion')">
+        <h2 class="emoji">🦁</h2>
+        <h2>Lion</h2>
+    </div>
+    <div class="animal" onclick="showInfo('frog')">
+        <h2 class="emoji">🐸</h2>
+        <h2>Frog</h2>
+    </div>
+    <div class="animal" onclick="showInfo('elephant')">
+        <h2 class="emoji">🐘</h2>
+        <h2>Elephant</h2>
+    </div>
+    <div class="animal" onclick="showInfo('giraffe')">
+        <h2 class="emoji">🦒</h2>
+        <h2>Giraffe</h2>
+    </div>
+    <div class="animal" onclick="showInfo('panda')">
+        <h2 class="emoji">🐼</h2>
+        <h2>Panda</h2>
+    </div>
+    <div class="animal" onclick="showInfo('koala')">
+        <h2 class="emoji">🐨</h2>
+        <h2>Koala</h2>
+    </div>
+    <div class="animal" onclick="showInfo('fox')">
+        <h2 class="emoji">🦊</h2>
+        <h2>Fox</h2>
+    </div>
+    <div class="animal" onclick="showInfo('dolphin')">
+        <h2 class="emoji">🐬</h2>
+        <h2>Dolphin</h2>
+    </div>
+    <div class="animal" onclick="showInfo('penguin')">
+        <h2 class="emoji">🐧</h2>
+        <h2>Penguin</h2>
+    </div>
+
+    <div id="info"></div>
+
+    <script>
+        function showInfo(animal) {
+            const infoDiv = document.getElementById('info');
+            let infoText = '';
+
+            switch (animal) {
+                case 'dog':
+                    infoText = 'Dogs are loyal and friendly. They love to play and go for walks!';
+                    break;
+                case 'cat':
+                    infoText = 'Cats are curious and independent. They enjoy napping and playing with toys!';
+                    break;
+                case 'rabbit':
+                    infoText = 'Rabbits are soft and gentle. They like to hop around and eat carrots!';
+                    break;
+                case 'hamster':
+                    infoText = 'Hamsters are small and furry. They love to run on wheels and store food!';
+                    break;
+                case 'turtle':
+                    infoText = 'Turtles have a hard shell and move slowly. They like to swim and sunbathe!';
+                    break;
+                case 'bird':
+                    infoText = 'Birds can fly and sing. They come in many colors and sizes!';
+                    break;
+                case 'fish':
+                    infoText = 'Fish live in water and come in many shapes and sizes. They are fun to watch!';
+                    break;
+                case 'lion':
+                    infoText = 'Lions are called the kings of the jungle. They are strong and live in groups called prides!';
+                    break;
+                case 'frog':
+                    infoText = 'Frogs can jump high and live both on land and in water. They like to catch flies!';
+                    break;
+                case 'elephant':
+                    infoText = 'Elephants are the largest land animals. They are very intelligent and social!';
+                    break;
+                case 'giraffe':
+                    infoText = 'Giraffes have long necks that help them reach leaves high in trees!';
+                    break;
+                case 'panda':
+                    infoText = 'Pandas are black and white bears that love to eat bamboo!';
+                    break;
+                case 'koala':
+                    infoText = 'Koalas are marsupials that sleep a lot and eat eucalyptus leaves!';
+                    break;
+                case 'fox':
+                    infoText = 'Foxes are clever animals that are known for their beautiful fur and bushy tails!';
+                    break;
+                case 'dolphin':
+                    infoText = 'Dolphins are intelligent marine mammals that love to play and jump in the water!';
+                    break;
+                case 'penguin':
+                    infoText = 'Penguins are flightless birds that waddle and love cold environments!';
+                    break;
+                default:
+                    infoText = '';
+            }
+
+            infoDiv.textContent = infoText;
+        }
+    </script>
+</body>
+</html>

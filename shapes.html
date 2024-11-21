@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shapes for Kids</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #ff9999, #ffcc99, #ffff99, #ccff99, #99ffcc, #99ccff, #9999ff, #cc99ff);
+            text-align: center;
+            padding: 20px;
+            overflow: hidden;
+        }
+        h1 {
+            color: #ff6f61;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+        }
+        .shape {
+            display: inline-block;
+            margin: 15px;
+            transition: transform 0.2s;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .shape:hover {
+            transform: scale(1.1);
+        }
+        .circle {
+            width: 100px;
+            height: 100px;
+            background-color: #6fa3ef;
+            border-radius: 50%;
+        }
+        .square {
+            width: 100px;
+            height: 100px;
+            background-color: #ffcc5c;
+        }
+        .rectangle {
+            width: 150px;
+            height: 100px;
+            background-color: #88d8b0;
+        }
+        .triangle {
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 100px solid #ff6f61;
+            display: inline-block;
+        }
+        .oval {
+            width: 120px;
+            height: 80px;
+            background-color: #ff9a9e;
+            border-radius: 60px;
+        }
+        .diamond {
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 70px solid #f3ca40;
+            position: relative;
+            top: 15px; /* Adjusted for better alignment */
+        }
+        .diamond:after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-top: 70px solid #f3ca40;
+            position: absolute;
+            top: 100%;
+            left: 0;
+        }
+        .parallelogram {
+            width: 100px;
+            height: 50px;
+            background-color: #a8e6cf;
+            transform: skew(20deg);
+        }
+        .trapezoid {
+            width: 100px;
+            height: 0;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            border-bottom: 50px solid #d5d5d5;
+        }
+        .pentagon {
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 80px solid #ffb347;
+            position: relative;
+            top: 10px;
+        }
+        .pentagon:after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 40px solid transparent;
+            border-right: 40px solid transparent;
+            border-top: 50px solid #ffb347;
+            position: absolute;
+            top: 100%;
+            left: -40px; /* Adjusted for better alignment */
+        }
+        .hexagon {
+            width: 100px;
+            height: 50px;
+            background-color: #ffe156;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        }
+        .octagon {
+            width: 100px;
+            height: 100px;
+            background-color: #ff677d;
+            clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+        }
+        .shape-info {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #333;
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 10px;
+            display: none; /* Initially hidden */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Shapes for Kids!</h1>
+    <button class="nav-btn" onclick="location.href='index.html'">Home</button>
+
+    <div class="shape circle" onclick="showInfo('Circle')"></div>
+    <div class="shape square" onclick="showInfo('Square')"></div>
+    <div class="shape rectangle" onclick="showInfo('Rectangle')"></div>
+    <div class="shape triangle" onclick="showInfo('Triangle')"></div>
+    <div class="shape oval" onclick="showInfo('Oval')"></div>
+    <div class="shape diamond" onclick="showInfo('Diamond')"></div>
+    <div class="shape parallelogram" onclick="showInfo('Parallelogram')"></div>
+    <div class="shape trapezoid" onclick="showInfo('Trapezoid')"></div>
+    <div class="shape hexagon" onclick="showInfo('Hexagon')"></div>
+    <div class="shape octagon" onclick="showInfo('Octagon')"></div>
+
+    <div id="shape-info" class="shape-info"></div>
+
+    <script>
+        function showInfo(shape) {
+            const infoDiv = document.getElementById('shape-info');
+            infoDiv.innerHTML = `This is a <strong>${shape}</strong>! It's a fun shape!`;
+            infoDiv.style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
